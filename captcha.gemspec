@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Captcha::VERSION
   spec.authors       = ["Mariano J. Ayesa"]
   spec.email         = ["mayesa@kumelsoft.com.ar"]
-  spec.summary       = "Captcha gem for the old captcha rails plugin." 
-  spec.description   = "Captcha gem for the old captcha rails plugin." 
+  spec.summary       = "Captcha gem for the old acts_as_captcha rails plugin." 
+  spec.description   = "Captcha gem for the old acts_as_captcha rails plugin." 
   spec.homepage      = ""
   spec.license       = "MIT"
 

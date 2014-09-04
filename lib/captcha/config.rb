@@ -3,10 +3,10 @@ module Captcha
     
     if defined?(Rails.env)
       PRODUCTION = Rails.env == 'production' || Rails.env == 'staging'
-      ROOT = "#{Rails.root}/"
+      #ROOT = "#{Rails.root}/"
     else
       PRODUCTION = false
-      ROOT = ""
+      #ROOT = ""
     end
     ONE_DAY = 24 * 60 * 60
     
@@ -18,7 +18,7 @@ module Captcha
       },
       # number of captcha images to generate
       :count => PRODUCTION ? 500 : 10,
-      :destination => "#{ROOT}public/images/captchas",
+      :destination => "public/images/captchas",
       :dimensions => {
         # canvas height (px)
         :height => 32,
@@ -54,7 +54,7 @@ module Captcha
     end
     
     def self.captchas
-      Dir["#{@@options[:destination]}/*.jpg"]
+      Dir["#{Rails.root}/#{@@options[:destination]}/*.jpg"]
     end
     
     def self.codes
