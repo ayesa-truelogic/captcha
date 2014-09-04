@@ -28,8 +28,8 @@ module Captcha
       w = o[:wave][:wavelength]
       canvas = canvas.wave(o[:wave][:amplitude], rand(w.last - w.first) + w.first)
       canvas = canvas.implode(o[:implode])
-  
-      @code = @code.to_s
+ 
+      @code = @code.join()
       @data = canvas.to_blob { self.format = "JPG" }
       canvas.destroy!
     end
